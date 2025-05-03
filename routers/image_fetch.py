@@ -13,6 +13,7 @@ def get_user_images(username: str):
         image_list.append({"filename": doc["filename"], "file_id": str(doc["_id"]), "type": doc["metadata"].get("type", "unknown")})
     return {"images": image_list}
 
+
 @router.get("/get-image/{file_id}")
 def get_image(file_id: str):
     try:
